@@ -1,10 +1,11 @@
-const menuOpenButton = document.querySelector("#menu-open-button");
-const menuCloseButton = document.querySelector("#menu-open-button");
+const tabsOpenButton = document.querySelector("#tabs-open-button");
+const tabsCloseButton = document.querySelector("#tabs-open-button");
 
-menuOpenButton.addEventListener("click", () => {
-  //Togglr mbile menu visibility
-  document.body.classList.toggle("show-mobile-menu");
+tabsOpenButton.addEventListener("click", () => {
+  //Togglr mbile tabs visibility
+  document.body.classList.toggle("show-mobile-tabs");
 });
 
-// Close the mobile menu when a nav link is clicked (optional)
-menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+// Close the mobile tabs when a nav link is clicked (optional)
+tabsCloseButton.addEventListener("click", () => tabsOpenButton.click());
+
