@@ -15,6 +15,7 @@
   --secondary-color: #e2aa28;
   --light-pink-red-color: #faf4f5;
   --light-blue-color: #2b5d74;
+  --light-gray-color: #f5f5f5;
 
   /* Font Sizes */
   --font-size-s: 0.9rem;
@@ -64,7 +65,24 @@ img {
   max-width: var(--site-max-width);
 }
 
-/* Header Styles */
+.section-title{
+  text-align: center;
+  padding: 50px 0 90px;
+  text-transform: uppercase;
+  font-size: var(--font-size-xl);
+}
+
+.section-title::after{
+  content: "";
+  width: 80px;
+  height: 5px;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: var(--border-radius-s);
+  background: var(--secondary-color);
+}
+
+/* Navbar Styles */
 header {
   background: var(--primary-color);
   position: fixed;
@@ -122,6 +140,123 @@ header .navbar {
   font-size: var(--font-size-xxl);
   font-weight: bold;
   font-family: "Playfair Display", serif;
+}
+
+/*about section styling*/
+.about-section {
+  background: var(--light-gray-color);
+  padding: 50px 0;
+}
+
+.about-section .section-content{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+}
+
+.about-section .about-details .section-title{
+  padding: 0;
+}
+
+.about-section .about-details{
+  max-width: 50%;
+}
+
+.about-section .about-details .text{
+  line-height: 30px;
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: var(--font-size-m);
+}
+
+.about-section .social-link-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.about-section .social-link-list .social-link{
+  color: var(--primary-color);
+  font-size: var(--font-size-l);
+  transition: 0.3s ease;
+}
+
+.about-section .social-link-list .social-link:hover{
+  color: var(--secondary-color);
+}
+
+/* Operations Section Styles */
+
+.operations-section {
+  background: var(--light-gray-color);
+  padding: 90px 0 90px;
+  
+}
+
+
+
+.operations-section .ops-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.operations-section .ops-list .ops-item{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: calc(100% / 3 - 100px);
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .5rem;
+  background: var(--white-color);
+  margin-top: -20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.operations-section .ops-item:hover{
+  transform: scale(1.05);
+}
+
+.operations-section .ops-list .ops-item .ops-image{
+  aspect-ratio: 1;
+  margin-bottom: 10px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.operations-section .ops-list .ops-item .name{
+  margin: 12px 0;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+
+}
+
+.operations-section .ops-list .ops-item .text{
+  font-size: var(--font-size-m);
+}
+
+/* Responsive media query code for max width 1024px */
+@media screen and (max-width: 1024px) {
+  .operations-section .ops-list{
+    gap: 70px;
+  }
+
+  .operations-section .ops-list .ops-item{
+    width: calc(100% / 2 - 60px);
+  }
 }
 
 /* Responsive media query code for max width 900px */
@@ -191,6 +326,10 @@ header .navbar {
     margin-top: 17px;
   }
 
+  .hero-section :is(.subtitle, .description), .about-section .about-details{
+    max-width: 100%;
+  }
+
   .hero-section .section-content{
     gap: 50px;
     text-align: center;
@@ -203,4 +342,40 @@ header .navbar {
     max-width: 300px;
     margin-right: 0;
   }
+
+  .about-section .section-content{
+    gap: 70px;
+    flex-direction: column-reverse;
+  }
+
+  .about-section .about-image-wrapper .about-image{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+
+  .operations-section .ops-list{
+    gap: 40px;
+  }
+
+  .operations-section .ops-list .ops-item{
+    width: calc(100% / 2 - 40px);
+  }
+
+  .operations-section .ops-list .ops-item .ops-image{
+    height: 240px;
+  }
+
+}
+
+@media screen and (max-width:640px) {
+  .operations-section .ops-list .ops-item{
+    width: 100%;
+  }
+
+  .operations-section .ops-list{ 
+    gap: 60px;
+  }
+  
 }
