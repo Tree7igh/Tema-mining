@@ -24,16 +24,16 @@
             <a href="#" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Operations</a>
+            <a href="#operations" class="nav-link">Operations</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Sustainability</a>
+            <a href="#sustainability" class="nav-link">Social Outreach</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About us</a>
+            <a href="#about" class="nav-link">About us</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Contact us</a>
+            <a href="#contact" class="nav-link">Contact us</a>
           </li>
         </ul>
 
@@ -53,7 +53,7 @@
       </section>
       
       <!--Operations Section-->
-      <section class="operations-section">
+      <section class="operations-section" id="operations">
        <h2 class="section-title">OUR OPERATIONS</h2>
        <div class="section-content">
          <ul class="ops-list">
@@ -94,9 +94,29 @@
          </ul>
        </div>
       </section>
-      
+
+      <!-- Sustainability Section -->
+      <section class="sustainability-section" id="sustainability">
+        <div class="section-content">
+          <div class="nature-image-wrapper">
+            <img src="images/ewa-t-uzNzYA3L0-unsplash.jpg" alt="nature" class="nature-image"/>
+          </div>
+          <h2 class="section-title">SOCIAL OUTREACH</h2>
+          <p class="text">Operating in remote villages and in largely underdeveloped areas,
+               it is important for Meepo to contribute to the improvement of the lives of villagers.
+
+               We will issue bursaries and provide onsite training for students in the various mining faculties
+               at tertiary institutions. This initiative will help ensure students have opportunities to
+               complete their practical's while gaining valuable experience (TBA).
+
+               Meepo will drill water wells in communities we are working in and assist the
+               community by constructing community health centers and providing transport for locals to these health facilities.
+           </p>
+        </div>
+      </section>
+
       <!-- about section -->
-       <section class="about-section">
+      <section class="about-section" id="about">
         <div class="section-content">
           <div class="about-image-wrapper">
             <img src="images/about.jpg" alt="about" class="about-image"/>
@@ -124,8 +144,55 @@
               </div>
           </div>
         </div>
-       </section>
-       
+      </section>
+      
+      <!-- contact section -->
+      <section class="contact-section" id="contact">
+        <h2 class="section-title">CONTACT US</h2>
+        <div class="section-content">
+          <ul class="contact-info-list">
+            <li class="contact-info">
+              <i class="fa-solid fa-location-crosshaairs"></i>
+              <p>4 Adler Street Windhoek, Namibia</p>
+            </li>           
+            <li class="contact-info">
+              <i class="fa-regular fa-envelope"></i>
+              <p>info@meepo.com</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+264 61 234 5678</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-clock"></i>
+              <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-clock"></i>
+              <p>Saturday: 9:00 AM - 1:00 PM</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-clock"></i>
+              <p>Sunday: Closed</p>
+            </li>
+          </ul>
+
+          <form action="#" class="contact-form">
+            <input type="text" placeholder="Your name" class="form-input"
+            required>
+            <input type="email" placeholder="Your email" class="form-input"
+            required>
+            <textarea placeholder="Your Message" class="form-input" required></textarea>
+            <button class="submit-button">Submit</button>
+         </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer-section">
+        <div class="section-content">
+          <p class="copyright-text">&copy; 2024 Meepo Mining Exploration. All rights reserved.</p>
+        </div>
+      </footer>
     </main>
     <script src="script.js"></script>
   </body>

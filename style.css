@@ -100,7 +100,6 @@ header .navbar {
 .navbar .nav-tabs {
   display: flex;
   gap: 10px;
-  z-index: 1;
 }
 
 .logo-text {
@@ -126,9 +125,9 @@ header .navbar {
   background: var(--secondary-color);
 }
 
-  .navbar :where(#tabs-close-button, #tabs-open-button){
-    display: none;
-  }
+.navbar :where(#tabs-close-button, #tabs-open-button){
+  display: none;
+}
 
 /* Hero Section Styles */
 .hero-section .text-overlay {
@@ -144,9 +143,7 @@ header .navbar {
   font-family: "Playfair Display", serif;
 }
 
-<<<<<<< Updated upstream
-=======
-/*sustainability section styling*/
+/* Sustainability Section Styling */
 .sustainability-section {
   background: var(--light-gray-color);
   padding: 50px 0;
@@ -187,11 +184,9 @@ header .navbar {
   line-height: 30px;
   font-size: var(--font-size-m);
   color: var(--dark-color);
-  
 }
 
->>>>>>> Stashed changes
-/*about section styling*/
+/* About Section Styling */
 .about-section {
   background: var(--light-gray-color);
   padding: 50px 0;
@@ -231,7 +226,6 @@ header .navbar {
   margin: 50px 0 30px;
   text-align: center;
   font-size: var(--font-size-m);
-
 }
 
 .about-section .social-link-list {
@@ -251,20 +245,16 @@ header .navbar {
 }
 
 /* Operations Section Styles */
-
 .operations-section {
   background: var(--light-gray-color);
   padding: 90px 0 90px;
-  
 }
-
-
 
 .operations-section .ops-list{
   display: flex;
   flex-wrap: wrap;
   gap: 100px;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
 
@@ -272,15 +262,15 @@ header .navbar {
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   width: calc(100% / 3 - 100px);
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .5rem;
   background: var(--white-color);
-  margin-top: -20px;
   cursor: pointer;
   transition: 0.3s ease;
+  overflow: hidden;
 }
 
 .operations-section .ops-item:hover{
@@ -288,35 +278,28 @@ header .navbar {
 }
 
 .operations-section .ops-list .ops-item .ops-image{
-  aspect-ratio: 1;
-  margin-bottom: 10px;
-  max-width: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
 
 .operations-section .ops-list .ops-item .name{
-  margin: 12px 0;
+  margin: 20px 0 10px;
+  padding: 0 15px;
   font-size: var(--font-size-l);
   font-weight: var(--font-weight-semibold);
-<<<<<<< Updated upstream
-
-=======
-  padding: 0 15px;
->>>>>>> Stashed changes
 }
 
 .operations-section .ops-list .ops-item .text{
   font-size: var(--font-size-m);
-<<<<<<< Updated upstream
-=======
-  padding: 0 15px;
   padding: 0 15px 20px;
   line-height: 1.6;
 }
 
-/* contact us section styling */
+/* Contact Us Section Styling */
 .contact-section{
-  padding: 50px  0 100px;
+  padding: 50px 0 100px;
   background: var(--light-gray-color);
 }
 
@@ -330,7 +313,7 @@ header .navbar {
 .contact-section .contact-info-list .contact-info{
   display: flex;
   gap: 20px;
-  margin:20px 0;
+  margin: 20px 0;
   align-items: center;
 }
 
@@ -381,11 +364,10 @@ header .navbar {
   border: 1px solid var(--secondary-color);
 }
 
-/* footer styling */
+/* Footer Styling */
 .footer-section{
   padding: 10px 0;
   background: var(--light-pink-red-color);
->>>>>>> Stashed changes
 }
 
 /* Responsive media query code for max width 1024px */
@@ -427,6 +409,7 @@ header .navbar {
   .navbar :where(#tabs-close-button, #tabs-open-button){
     display: block;
     font-size: var(--font-size-l);
+    cursor: pointer;
   }
 
   .navbar #tabs-close-button {
@@ -438,8 +421,7 @@ header .navbar {
   .navbar #tabs-open-button {
     color: var(--white-color);
   }
-  
-  
+
   .navbar .nav-tabs {
     display: block;
     position: fixed;
@@ -453,6 +435,7 @@ header .navbar {
     align-items: center;
     padding-top: 100px;
     transition: left 0.2s ease;
+    z-index: 2;
   }
 
   body.show-mobile-tabs .navbar .nav-tabs {
@@ -508,8 +491,6 @@ header .navbar {
     height: 240px;
   }
 
-<<<<<<< Updated upstream
-=======
   /* Sustainability section responsive */
   .sustainability-section .section-content {
     flex-direction: column;
@@ -538,11 +519,9 @@ header .navbar {
     flex-direction: column-reverse;
     align-items: center;
   }
-
->>>>>>> Stashed changes
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .operations-section .ops-list .ops-item{
     width: 100%;
   }
@@ -550,5 +529,4 @@ header .navbar {
   .operations-section .ops-list{ 
     gap: 60px;
   }
-  
 }
