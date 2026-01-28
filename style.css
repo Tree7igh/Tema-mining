@@ -275,6 +275,18 @@ header .navbar {
 
 .operations-section .ops-item:hover{
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* New styles for clickable ops-link */
+.operations-section .ops-list .ops-item .ops-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
 }
 
 .operations-section .ops-list .ops-item .ops-image{
@@ -289,12 +301,70 @@ header .navbar {
   padding: 0 15px;
   font-size: var(--font-size-l);
   font-weight: var(--font-weight-semibold);
+  color: var(--dark-color);
 }
 
 .operations-section .ops-list .ops-item .text{
   font-size: var(--font-size-m);
   padding: 0 15px 20px;
   line-height: 1.6;
+  color: var(--dark-color);
+}
+
+/* Detail Section Styles (for new dedicated pages) */
+.detail-section {
+  background: var(--white-color);
+  padding: 50px 0 100px;
+  margin-top: 80px;
+}
+
+.detail-section .section-title {
+  padding: 30px 0 50px;
+}
+
+.detail-section .detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.detail-section .detail-subtitle {
+  font-size: var(--font-size-l);
+  color: var(--primary-color);
+  margin: 40px 0 20px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.detail-section .text {
+  line-height: 1.8;
+  font-size: var(--font-size-m);
+  color: var(--dark-color);
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.detail-section .back-button-wrapper {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.detail-section .back-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.detail-section .back-button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Us Section Styling */
