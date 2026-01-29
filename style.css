@@ -161,6 +161,11 @@ header .navbar {
   width: 45%;
 }
 
+.sustainability-section .nature-image-wrapper .image-link {
+  display: block;
+  text-decoration: none;
+}
+
 .sustainability-section .nature-image-wrapper .nature-image {
   width: 100%;
   height: 100%;
@@ -169,6 +174,15 @@ header .navbar {
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.sustainability-section .nature-image-wrapper .nature-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sustainability-section .sustainability-text-content {
+  flex: 1;
 }
 
 .sustainability-section .section-title {
@@ -180,10 +194,24 @@ header .navbar {
   margin: 10px 0 0 0;
 }
 
+.sustainability-section .text-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.sustainability-section .text-link:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
 .sustainability-section .text {
   line-height: 30px;
   font-size: var(--font-size-m);
   color: var(--dark-color);
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 /* About Section Styling */
@@ -572,12 +600,20 @@ header .navbar {
     max-width: 400px;
   }
 
+  .sustainability-section .sustainability-text-content {
+    width: 100%;
+  }
+
   .sustainability-section .section-title {
     text-align: center;
   }
 
   .sustainability-section .section-title::after {
     margin: 10px auto 0;
+  }
+
+  .sustainability-section .text-link:hover {
+    transform: translateX(0);
   }
 
   .contact-section .contact-form{
